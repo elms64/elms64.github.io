@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font: bold 14px/1.4 "Saira Extra Condensed", sans-serif;
+  background: #000;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 0.2em;
+  color: #a0a0a0;
+}
+
+h2 {
+  font-size: 26px;
+  letter-spacing: 0.2em;
+  color: #a0a0a0;
+}
+
+hr {
+  border: none; /* Remove the default border */
+  height: 0.5px; /* Set the height of the <hr> */
+  background-color: #a0a0a0; /* This is what colors the <hr> */
+}
+h4 {
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: #a0a0a0;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  color: #a0a0a0;
+}
+
+footer {
+  z-index: 1;
+  padding: 50px;
+  position: relative;
+  background: rgba(13, 2, 8, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background: rgba(13, 2, 8, 0.2);
+  padding-top: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+  z-index: 1; /* Ensure it's above other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 0 30px;
+  width: 100%; /* Ensure nav spans the full width */
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: bold;
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 20px; /* Adjust the gap between links as needed */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000; /* Adjust the color as needed */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  padding: 15px 0;
+}
+
+a {
+  color: #a0a0a0;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  font-size: 24px;
+}
+
+a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #a0a0a0;
+  transform: scaleX(0);
+  transform-origin: left center; /* Start the scaling from the left */
+  transition: transform 0.5s ease;
+}
+
+a:hover:after {
+  transform: scaleX(1); /* Scale to full width */
+}
+
+.waviy {
+  position: relative;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  transition: transform 0.5s ease;
+}
+
+a:hover .waviy span {
+  animation: flip 2s forwards; /* Adjust total duration to include delay */
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes flip {
+  0%,
+  20% {
+    /* Assuming you want a 20% delay at the start */
+    transform: rotateY(0deg);
+  }
+  20%,
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+
+/* Particle.js container styling */
+#particles-js {
+  position: fixed; /* or 'absolute' */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Behind content */
+}
+
+/* Overlay content styling */
+.card {
+  position: relative; /* Adjust as needed for your layout */
+  z-index: 1; /* Above the particle.js container */
+  margin: 100px auto; /* Center the card on the page */
+  padding: 50px;
+  background: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 500px;
+  z-index: 100000;
+}
+
+.card h1,
+.card p {
+  margin: 0;
+  color: #a0a0a0;
+  
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 40px;
+  z-index: 1;
+}
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 20px;
+  z-index: 1;
+}
+
+.right-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.right-column .top-section,
+.right-column .bottom-section {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.right-column .bottom-section {
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.right-column .section-item {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+.right-column .section-item img {
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fullscreen filler div to create spacing effect */
+
+
+.viewport-filler {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make the viewport-filler take the full height of the viewport */
+  width: 100%; /* Ensure it spans the full width */
+
+}
+
+.pdf {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.badges {
+  position: relative;
+  z-index: 1;
+}
+
+
+.slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0 75px;
+  width: 100%;
+  height: 500px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+  padding:50px;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 5;;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-bottom: -25px;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+  z-index: 5;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}

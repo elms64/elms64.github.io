@@ -1,1 +1,263 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>James Elms | elms64 | Software Developer</title>
+    <meta
+      name="description"
+      content="A software development portfolio for James Elms, full-stack software engineer"
+    />
+    <meta name="author" content="James Elms" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/konpa/devicon/icons/github/github-original.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .badge img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+
+      .badge:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-brand" style="margin-top: 20px">
+        <h1>James Elms</h1>
+        <h4>Full-Stack Software Developer</h4>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#about"
+            ><div class="waviy">
+              <span style="--i: 1">A</span><span style="--i: 2">b</span
+              ><span style="--i: 3">o</span><span style="--i: 4">u</span
+              ><span style="--i: 5">t</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#portfolio"
+            ><div class="waviy">
+              <span style="--i: 1">P</span><span style="--i: 2">o</span
+              ><span style="--i: 3">r</span><span style="--i: 4">t</span
+              ><span style="--i: 5">f</span><span style="--i: 6">o</span
+              ><span style="--i: 7">l</span><span style="--i: 8">i</span
+              ><span style="--i: 9">o</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#contact"
+            ><div class="waviy">
+              <span style="--i: 1">C</span><span style="--i: 2">o</span
+              ><span style="--i: 3">n</span><span style="--i: 4">t</span
+              ><span style="--i: 5">a</span><span style="--i: 6">c</span
+              ><span style="--i: 7">t</span>
+            </div></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <div class="container" id="about">
+      <div class="left-column">
+        <h3>About Me</h3>
+        <hr />
+        <p>
+          I have had the opportunity to design, create and deploy a fully
+          functional inventory management and booking software system,
+          commissioned by the university’s media department which has been a
+          huge success thus far. The application system allows students to view
+          and book media equipment, as well as allowing teachers to seamlessly
+          manage these loans and the overall inventory and system of users. I
+          used the identity framework and Graph API to integrate authentication
+          into the existing Microsoft Entra tenant for the college and deployed
+          the web application using Azure App Service. I am competent with these
+          technologies and I am looking forward to exploring a career in .NET
+          development.
+        </p>
+        <br />
+        <p>
+          In addition to this I have completed several software development
+          projects using C# and I am competent in ASP.NET, EF Core, Razor Pages,
+          Git / GitHub, SQL, HTML CSS and JS. I have gained valuable experience
+          in software development, in addition to my time spent in other
+          industries prior to my study and I am very keen to start the next
+          phase. I am a very hardworking and reliable person with great
+          initiative skills and instinct. I am looking forward to working in a
+          team and utilising my excellent interpersonal communication skills. I
+          am adaptable and flexible in any environment and possess the ability
+          to make crucial decisions with quick timing, understanding cause and
+          effect within a working environment and applying this to many diverse
+          settings. I excel at building long-lasting rapport with both
+          colleagues and clients, leveraging the strengths of my team and myself
+          to continually advance our professional development.
+        </p>
+      </div>
+
+      <div class="right-column" id="portfolio">
+        <div class="top-section">
+          <div class="section-item">
+            <h3>Recent Projects</h3>
+            <hr />
+            <br />
+            <h3>Media Kit Manager</h3><br>
+            <p>
+              An inventory management system and booking software built for a
+              college media department, <br />considering unique requirements
+              and features to optimise business processes.</p><br><p> This program
+              features role based access using the identity framework and Graph
+              API, allowing students to view and book media equipment, as well
+              as allowing teachers to manage these loans and the overall
+              inventory and system of users using existing credentials from the
+              college, integrating closely into the college network for a
+              seamless deployment.
+            </p>
+            <div class="slideshowContainer">
+              <img
+                class="imageSlides"
+                src="/files/basket.png"
+                alt="beach side city view"
+              />
+              <img
+                class="imageSlides"
+                src="/files/batchupload.png"
+                alt="leaf on the ground"
+              />
+              <img
+                class="imageSlides"
+                src="/files/inventorylist.png"
+                alt="lake surrounded by mountains"
+              />
+              <span id="leftArrow" class="slideshowArrow">&#8249;</span>
+              <span id="rightArrow" class="slideshowArrow">&#8250;</span>
+              <div class="slideshowCircles">
+                <span class="circle dot"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+            </div>
+            <!-- <img src="/Images/inventorylist.png" alt="Project 1" style="width: 60%; margin-left: -20px" /> -->
+            <div style="margin-bottom: 10px"></div>
+          </div>
+        </div>
+        <div class="bottom-section">
+          <div class="section-item">
+            <h3>Technologies</h3>
+            <hr />
+            <div class="badges">
+              <div class="badge" title="C#">
+                <img src="/files/csharp.png" alt="C#" />
+              </div>
+              <div class="badge" title="Azure">
+                <img src="/files/azure.png" alt="Azure" />
+              </div>
+              <div class="badge" title="Bootstrap">
+                <img src="/files/bootstrap.png" alt="Bootstrap" />
+              </div>
+              <div class="badge" title="CSS">
+                <img src="/files/css.png" alt="CSS" />
+              </div>
+              <div class="badge" title=".NET">
+                <img src="/files/dotnet.png" alt=".NET" />
+              </div>
+              <div class="badge" title="Figma">
+                <img src="/files/figma.png" alt="Figma" />
+              </div>
+              <div class="badge" title="Git">
+                <img src="/files/git.png" alt="Git" />
+              </div>
+              <div class="badge" title="HTML">
+                <img src="/files/html.png" alt="HTML" />
+              </div>
+              <div class="badge" title="JavaScript">
+                <img src="/files/javascript.png" alt="JavaScript" />
+              </div>
+              <div class="badge" title="NodeJS">
+                <img src="/files/nodejs.png" alt="NodeJS" />
+              </div>
+              <div class="badge" title="SQLite">
+                <img src="/files/sqlite.png" alt="SQLite" />
+              </div>
+              <div class="badge" title="SQL">
+                <img src="/files/sql.png" alt="SQL" />
+              </div>
+            </div>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fill the viewport -->
+    <div class="viewport-filler"></div>
+
+    <footer id="contact">
+      <div class="footer-content">
+        <hr />
+        <div class="flex-container">
+          <div class="contact-details">
+            <h3>Want to work together? Get in touch!</h3>
+            <br />
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/elms64" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="mailto:james_elms@live.co.uk"
+              ><i class="bx bx-envelope"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/james-elms-52661188/"
+              target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>

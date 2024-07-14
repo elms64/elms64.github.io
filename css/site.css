@@ -12,6 +12,7 @@ html {
   background: #000;
   color: #fff;
   letter-spacing: 0.1em;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -20,27 +21,20 @@ html {
   box-sizing: border-box;
 }
 
+/* ----------- Headers / Fonts ----------- */
+
 h1 {
   font-size: 36px;
   letter-spacing: 0.2em;
   color: #a0a0a0;
+  white-space: nowrap;
 }
 
 h2 {
   font-size: 26px;
   letter-spacing: 0.2em;
   color: #a0a0a0;
-}
-
-hr {
-  border: none; /* Remove the default border */
-  height: 0.5px; /* Set the height of the <hr> */
-  background-color: #a0a0a0; /* This is what colors the <hr> */
-}
-h4 {
-  font-size: 15px;
-  letter-spacing: 0.2em;
-  color: #a0a0a0;
+  white-space: nowrap;
 }
 
 h3 {
@@ -49,55 +43,18 @@ h3 {
   color: #a0a0a0;
 }
 
-footer {
-  z-index: 1;
-  padding: 50px;
-  position: relative;
-  background: rgba(13, 2, 8, 0.2);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+h4 {
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: #a0a0a0;
+  white-space: nowrap;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav {
-  background: rgba(13, 2, 8, 0.2);
-  padding-top: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
-  z-index: 1; /* Ensure it's above other elements */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  padding: 0 30px;
-  width: 100%; /* Ensure nav spans the full width */
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.nav-brand {
-  font-size: 20px;
-  font-weight: bold;
-  width: 20%;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: end;
-  gap: 20px; /* Adjust the gap between links as needed */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #000; /* Adjust the color as needed */
+hr {
+  border: none; /* Remove the default border */
+  height: 0.5px; /* Set the height of the <hr> */
+  background-color: #a0a0a0; /* This is what colors the <hr> */
+  margin-top:3px;
 }
 
 ul {
@@ -143,6 +100,127 @@ a:hover:after {
   transform: scaleX(1); /* Scale to full width */
 }
 
+/* ----------- Components ----------- */
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.badges {
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.badge img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .badges {
+    gap: 25px; /* Reduce the gap between badges */
+  }
+
+  .badge {
+    width: 50px; /* Reduce badge width */
+    height: 50px; /* Reduce badge height */
+  }
+
+  .badge img {
+    max-width: 70%; /* Adjust image size within the badge */
+    max-height: 70%;
+  }
+}
+
+footer {
+  z-index: 1;
+  padding: 50px;
+  position: relative;
+  background: rgba(13, 2, 8, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  background: rgba(13, 2, 8, 0.2);
+  padding-top: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+  z-index: 1; /* Ensure it's above other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 0 30px;
+  width: 100%; /* Ensure nav spans the full width */
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: bold;
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 20px; /* Adjust the gap between links as needed */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000; /* Adjust the color as needed */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-brand {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ----------- Animations ----------- */
+
 .waviy {
   position: relative;
 }
@@ -179,21 +257,19 @@ a:hover .waviy span {
   }
 }
 
-/* Particle.js container styling */
 #particles-js {
-  position: fixed; /* or 'absolute' */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Behind content */
+  z-index: 0; 
 }
 
-/* Overlay content styling */
 .card {
-  position: relative; /* Adjust as needed for your layout */
-  z-index: 1; /* Above the particle.js container */
-  margin: 100px auto; /* Center the card on the page */
+  position: relative;
+  z-index: 1; 
+  margin: 100px auto;
   padding: 50px;
   background: #000000;
   border-radius: 10px;
@@ -209,9 +285,6 @@ a:hover .waviy span {
   color: #a0a0a0;
   
 }
-
-
-
 
 .container {
   display: flex;
@@ -264,13 +337,26 @@ a:hover .waviy span {
   z-index: 1;
 }
 
-/* Ensure smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .left-column,
+  .right-column,
+  .right-column .top-section,
+  .right-column .bottom-section {
+    flex: none; /* Reset any flex settings */
+    width: 100%; /* Make them take full width */
+    margin-right: 0; /* Remove any margin-right that may affect the layout */
+    margin-bottom: 20px; /* Add some space between the stacked elements */
+  }
+
+  .right-column .bottom-section {
+    margin-bottom: 0; /* Keep the bottom margin for the last element as 0 */
+  }
 }
-
-/* Fullscreen filler div to create spacing effect */
-
 
 .viewport-filler {
   display: flex;
@@ -287,12 +373,6 @@ html {
   z-index: 1;
 }
 
-.badges {
-  position: relative;
-  z-index: 1;
-}
-
-
 .slideshowContainer {
   position: relative;
   overflow: hidden;
@@ -306,15 +386,17 @@ html {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
+  width: auto; /* Adjusted */
+  height: auto; /* Adjusted */
+  max-width: 100%;
+  max-height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: -1;
-  padding:50px;
+  padding: 50px; /* Consider adjusting or removing if it causes issues */
+  object-fit: contain; /* Ensures the image is scaled to maintain its aspect ratio while fitting within the element's box */
 }
 
-/* add 'visible' class via Javascript */
 .visible {
   opacity: 1;
 }
@@ -369,4 +451,10 @@ html {
 .dot {
   background-color: rgba(255, 255, 255, 0.7);
   border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .slideshowContainer {
+   display: none;
+  }
 }

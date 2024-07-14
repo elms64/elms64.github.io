@@ -57,3 +57,32 @@ const slideshow = () => {
 };
 
 // Removed the initial setTimeout call to prevent the quick change to the second image
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.mobile-images img');
+  if (images.length === 0) return; // Exit if no images
+
+  function showNextImage() {
+    // Set the current image to fade out
+    images[currentIndex].style.opacity = 0;
+
+    // Calculate the index of the next image
+    currentIndex = (currentIndex + 1) % images.length;
+
+    // Set the next image to fade in
+    images[currentIndex].style.opacity = 1;
+  }
+
+  // Initially, set all images except the first to opacity 0
+  images.forEach((img, index) => {
+    if (index !== 0) img.style.opacity = 0;
+  });
+
+  // Change image every 3 seconds
+  setInterval(showNextImage, 3000);
+});

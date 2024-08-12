@@ -510,3 +510,11 @@ a:hover .waviy span {
     height: 20px;
   }
 }
+
+.profile-picture {
+  width: 70%; /* Adjust size as needed */
+  margin-bottom: 10px;
+  border: 3px solid #ccc; /* Add a border */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a professional look */
+}

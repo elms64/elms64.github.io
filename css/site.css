@@ -477,7 +477,7 @@ a:hover .waviy span {
     height: 30vh;
   }
   .viewport-filler {
-    height: 30vh;
+    height: 100vh;
   }
   
 }
@@ -488,7 +488,7 @@ a:hover .waviy span {
   }
 
   .viewport-filler {
-    height: 30vh;
+    height: 100vh;
   }
   
 

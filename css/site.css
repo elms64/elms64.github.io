@@ -280,9 +280,11 @@ a:hover .waviy span {
 .card {
   position: relative;
   z-index: 1;
-  margin: 100px auto;
+  margin: 200px auto;
+  margin-top: 50px auto;
+  margin-bottom: 50px auto;
   padding: 50px;
-  background: #000000;
+  background: rgba(13, 2, 8, 0.2);
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -300,16 +302,16 @@ a:hover .waviy span {
   display: flex;
   flex-direction: row;
   margin: 40px;
+  width: 500px;
   z-index: 1;
   text-align: center;
+  align-items: center; /* Ensure items within the container are centered */
 }
 
 .left-column {
   flex: 1;
   padding: 60px;
   background: rgba(255, 255, 255, 0.1);
-  margin-right: 300px;
-  margin-left: 300px;
   margin-top: 50px;
   z-index: 1;
 }

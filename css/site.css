@@ -13,6 +13,10 @@ html {
   color: #fff;
   letter-spacing: 0.1em;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  font-weight: 300; /* Adjust this value as needed */
 }
 
 p {
@@ -302,9 +306,11 @@ a:hover .waviy span {
 
 .left-column {
   flex: 1;
-  padding: 30px;
+  padding: 60px;
   background: rgba(255, 255, 255, 0.1);
-  margin-right: 20px;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: 50px;
   z-index: 1;
 }
 
